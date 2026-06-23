@@ -15,7 +15,7 @@ const fadeUp = {
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, amount: "some" });
 
   return (
     <section

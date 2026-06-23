@@ -15,7 +15,7 @@ export default function ContactForm() {
   const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
 
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, amount: "some" });
 
   return (
     <section
@@ -94,7 +94,7 @@ export default function ContactForm() {
             <div className="glass-panel p-7 md:p-10 rounded-3xl border border-slate-250 shadow-2xl relative">
               <div className="mb-7">
                 <h3 className="text-xl font-bold text-slate-900">Inquiry Form</h3>
-                <p className="text-xs text-slate-500 mt-1">Submit your requirement. Secured by Google Stitch MCP pipeline.</p>
+                <p className="text-xs text-slate-500 mt-1">We&apos;ll get back to you within one business day.</p>
               </div>
 
               {/* Status Banner */}

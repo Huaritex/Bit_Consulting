@@ -37,7 +37,7 @@ const cardVariants = {
 
 export default function Metrics() {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const inView = useInView(ref, { once: true, amount: "some" });
   const examsCount = useCountUp(10000, 1600, inView);
 
   const metrics = [

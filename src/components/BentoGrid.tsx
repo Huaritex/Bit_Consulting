@@ -15,7 +15,7 @@ const cardVariants = {
 
 export default function BentoGrid() {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, amount: "some" });
 
   return (
     <section id="services" ref={ref} className="py-20 md:py-24 relative overflow-hidden bg-slate-50/50 border-y border-slate-100">

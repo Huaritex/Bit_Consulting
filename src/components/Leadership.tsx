@@ -23,7 +23,7 @@ const LinkedInIcon = () => (
 
 export default function Leadership() {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, amount: "some" });
 
   const members = [
     {
@@ -32,7 +32,7 @@ export default function Leadership() {
       abbr: "CEO",
       bio: "Leads BIT Consulting's strategic vision, cultivating global client relationships and national certification frameworks.",
       initials: "EG",
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/edwin-guarachi-1aba4417",
     },
     {
       name: "Henry Guarachi",
@@ -40,7 +40,7 @@ export default function Leadership() {
       abbr: "CTO",
       bio: "Oversees engineering operations, software architecture, Scrum agile development compliance, and cloud structures.",
       initials: "HG",
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/henry-guarachi-guzm%C3%A1n-aa12971b5",
     },
     {
       name: "David Ramer",
@@ -48,7 +48,7 @@ export default function Leadership() {
       abbr: "CIO",
       bio: "Directs internal infrastructure, certification center security audits, and redundant enterprise network compliance.",
       initials: "DR",
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/dramer",
     },
   ];
 
