@@ -16,6 +16,7 @@ const fadeUp = {
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, amount: "some" });
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
 
   return (
     <section
@@ -89,11 +90,13 @@ export default function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="#certifications"
-                className="px-7 py-4 rounded-xl text-sm font-semibold tracking-wide border border-slate-200 bg-white/50 hover:bg-slate-50 hover:border-slate-350 text-slate-800 transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] backdrop-blur-sm min-h-[52px] shadow-sm"
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-7 py-4 rounded-xl text-sm font-semibold tracking-wide border border-primary/30 bg-primary/5 hover:bg-primary/10 text-secondary transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98] backdrop-blur-sm min-h-[52px]"
               >
-                Book an Exam Center
-                <Calendar className="w-4 h-4 text-primary" />
+                Agendar mi Aula
+                <Calendar className="w-4 h-4" />
               </a>
             </motion.div>
 

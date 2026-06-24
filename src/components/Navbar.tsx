@@ -23,10 +23,13 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
+
   const navLinks = [
     { name: "Services", href: "#services" },
     { name: "Certifications", href: "#certifications" },
     { name: "Academy", href: "#training" },
+    { name: "Reservar Aula", href: bookingUrl, isExternal: true },
     { name: "Leadership", href: "#leadership" },
   ];
 
@@ -76,6 +79,8 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className="text-sm font-medium text-slate-600 hover:text-primary transition-colors duration-200"
               >
                 {link.name}
@@ -124,6 +129,8 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
+                    target={link.isExternal ? "_blank" : undefined}
+                    rel={link.isExternal ? "noopener noreferrer" : undefined}
                     initial={{ opacity: 0, x: -16 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}

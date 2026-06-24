@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
 
   return (
     <footer className="bg-white border-t border-slate-100 pt-16 pb-8 relative overflow-hidden">
@@ -72,6 +73,11 @@ export default function Footer() {
             <li>
               <a href="#training" className="hover:text-primary transition-colors">
                 Corporate Training & Labs
+              </a>
+            </li>
+            <li>
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                Reservas de Aulas
               </a>
             </li>
           </ul>
