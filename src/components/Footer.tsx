@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://bit-consulting-reservas--bitconsulting-4e25e.us-east4.hosted.app/";
 
   return (
     <footer className="bg-white border-t border-slate-100 pt-16 pb-8 relative overflow-hidden">

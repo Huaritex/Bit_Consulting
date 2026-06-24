@@ -23,7 +23,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://bit-consulting-reservas--bitconsulting-4e25e.us-east4.hosted.app/";
 
   const navLinks = [
     { name: "Services", href: "#services" },

@@ -16,7 +16,7 @@ const fadeUp = {
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, amount: "some" });
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "http://localhost:3001";
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "https://bit-consulting-reservas--bitconsulting-4e25e.us-east4.hosted.app/";
 
   return (
     <section
